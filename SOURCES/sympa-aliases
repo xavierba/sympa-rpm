@@ -1,7 +1,9 @@
 # Robot aliases for Sympa.
 sympa:              "| /usr/libexec/sympa/queue sympa@my.domain.org"
 listmaster:         "| /usr/libexec/sympa/queue listmaster@my.domain.org"
-bounce:             "| /usr/libexec/sympa/bouncequeue sympa@my.domain.org"
+# For postfix, use bounce:
+# For sendmail, use bounce+*:
+bounce+*:             "| /usr/libexec/sympa/bouncequeue sympa@my.domain.org"
 abuse-feedback-report: "| /usr/libexec/sympa/bouncequeue sympa@my.domain.org"
 sympa-request:      postmaster
 sympa-owner:        postmaster

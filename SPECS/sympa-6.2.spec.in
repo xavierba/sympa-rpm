@@ -26,8 +26,7 @@ Source106:   sympa-rsyslog.conf
 Source107:   sympa-logrotate.conf
 Source112:   sympa-sysvinit-README.RPM.md
 Source113:   sympa-systemd-README.RPM.md
-Source114:   aliases.sympa.sendmail
-Source115:   aliases.sympa.postfix
+Source114:   sympa-aliases
 Source129:   sympa.service.d-dependencies.conf
 
 # Add path to MHonArc::UTF8 so that sympa_wizard won't miss it
@@ -420,9 +419,8 @@ ln -s %{_datadir}/doc/%{name}/README \
 %endif
 
 # Copy robot aliases.
-install -m 0644 %{SOURCE114} %{SOURCE115} %{buildroot}%{_sysconfdir}/sympa/
-touch %{buildroot}%{_sysconfdir}/sympa/aliases.sympa.sendmail.db
-touch %{buildroot}%{_sysconfdir}/sympa/aliases.sympa.postfix.db
+install -m 0644 %{SOURCE114} %{buildroot}%{_sysconfdir}/sympa/aliases
+touch %{buildroot}%{_sysconfdir}/sympa/aliases.db
 
 # Copy rsyslog config
 mkdir -p %{buildroot}%{_sysconfdir}/rsyslog.d
@@ -651,10 +649,8 @@ fi
 %dir %attr(-,sympa,sympa) %{_sysconfdir}/sympa/families
 %dir %attr(-,sympa,sympa) %{_sysconfdir}/sympa/search_filters
 %config(missingok) %attr(-,sympa,sympa) %{_sysconfdir}/sympa/data_structure.current_version
-%config(noreplace) %{_sysconfdir}/sympa/aliases.sympa.sendmail
-%config(noreplace) %{_sysconfdir}/sympa/aliases.sympa.sendmail.db
-%config(noreplace) %{_sysconfdir}/sympa/aliases.sympa.postfix
-%config(noreplace) %{_sysconfdir}/sympa/aliases.sympa.postfix.db
+%config(noreplace) %attr(-,sympa,sympa) %{_sysconfdir}/sympa/aliases
+%config(noreplace) %{_sysconfdir}/sympa/aliases.db
 %{_sysconfdir}/smrsh/*
 %config(noreplace) %{_sysconfdir}/rsyslog.d/*
 %config(noreplace) %{_sysconfdir}/logrotate.d/sympa
