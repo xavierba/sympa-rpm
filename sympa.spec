@@ -712,26 +712,26 @@ fi
 %dir %attr(-,sympa,sympa) %{_sysconfdir}/sympa/
 %{_sysconfdir}/sympa/README
 %config(noreplace) %attr(0640,sympa,sympa) %{_sysconfdir}/sympa/sympa.conf
-%config(noreplace,missingok) %attr(-,sympa,sympa) %{_sysconfdir}/sympa/auth.conf
-%config(noreplace,missingok) %attr(-,sympa,sympa) %{_sysconfdir}/sympa/charset.conf
-%config(noreplace,missingok) %attr(-,sympa,sympa) %{_sysconfdir}/sympa/crawlers_detection.conf
-%config(noreplace,missingok) %attr(-,sympa,sympa) %{_sysconfdir}/sympa/create_list.conf
-%config(noreplace,missingok) %attr(-,sympa,sympa) %{_sysconfdir}/sympa/edit_list.conf
-%config(noreplace,missingok) %attr(-,sympa,sympa) %{_sysconfdir}/sympa/nrcpt_by_domain.conf
-%config(noreplace,missingok) %attr(-,sympa,sympa) %{_sysconfdir}/sympa/topics.conf
-%config(noreplace,missingok) %attr(-,sympa,sympa) %{_sysconfdir}/sympa/mime.types
-%config(noreplace,missingok) %attr(-,sympa,sympa) %{_sysconfdir}/sympa/sympa.wsdl
-%dir %attr(-,sympa,sympa) %{_sysconfdir}/sympa/create_list_templates
-%dir %attr(-,sympa,sympa) %{_sysconfdir}/sympa/global_task_models
-%dir %attr(-,sympa,sympa) %{_sysconfdir}/sympa/list_task_models
-%dir %attr(-,sympa,sympa) %{_sysconfdir}/sympa/scenari
-%dir %attr(-,sympa,sympa) %{_sysconfdir}/sympa/mail_tt2
-%dir %attr(-,sympa,sympa) %{_sysconfdir}/sympa/web_tt2
-%dir %attr(-,sympa,sympa) %{_sysconfdir}/sympa/custom_actions
-%dir %attr(-,sympa,sympa) %{_sysconfdir}/sympa/custom_conditions
-%dir %attr(-,sympa,sympa) %{_sysconfdir}/sympa/data_sources
-%dir %attr(-,sympa,sympa) %{_sysconfdir}/sympa/families
-%dir %attr(-,sympa,sympa) %{_sysconfdir}/sympa/search_filters
+%config(noreplace,missingok) %{_sysconfdir}/sympa/auth.conf
+%config(noreplace,missingok) %{_sysconfdir}/sympa/charset.conf
+%config(noreplace,missingok) %{_sysconfdir}/sympa/crawlers_detection.conf
+%config(noreplace,missingok) %{_sysconfdir}/sympa/create_list.conf
+%config(noreplace,missingok) %{_sysconfdir}/sympa/edit_list.conf
+%config(noreplace,missingok) %{_sysconfdir}/sympa/nrcpt_by_domain.conf
+%config(noreplace,missingok) %{_sysconfdir}/sympa/topics.conf
+%config(noreplace,missingok) %{_sysconfdir}/sympa/mime.types
+%config(noreplace,missingok) %{_sysconfdir}/sympa/sympa.wsdl
+%dir %{_sysconfdir}/sympa/create_list_templates
+%dir %{_sysconfdir}/sympa/global_task_models
+%dir %{_sysconfdir}/sympa/list_task_models
+%dir %{_sysconfdir}/sympa/scenari
+%dir %{_sysconfdir}/sympa/mail_tt2
+%dir %{_sysconfdir}/sympa/web_tt2
+%dir %{_sysconfdir}/sympa/custom_actions
+%dir %{_sysconfdir}/sympa/custom_conditions
+%dir %{_sysconfdir}/sympa/data_sources
+%dir %{_sysconfdir}/sympa/families
+%dir %{_sysconfdir}/sympa/search_filters
 %config(missingok) %attr(-,sympa,sympa) %{_sysconfdir}/sympa/data_structure.current_version
 %config(noreplace) %{_sysconfdir}/sympa/aliases.sympa.sendmail
 %config(noreplace) %{_sysconfdir}/sympa/aliases.sympa.sendmail.db
