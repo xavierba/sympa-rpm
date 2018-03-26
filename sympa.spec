@@ -751,6 +751,8 @@ fi
 %{_libexecdir}/sympa/wwsympa.fcgi
 %attr(6755,sympa,sympa) %{_libexecdir}/sympa/wwsympa-wrapper.fcgi
 %dir %{_localstatedir}/lib/sympa/
+%ghost %attr(-,sympa,sympa )%{_localstatedir}/lib/sympa/sympa_aliases
+%ghost %attr(-,sympa,root) %{_localstatedir}/lib/sympa/sympa_aliases.db
 %attr(-,sympa,sympa) %{_localstatedir}/lib/sympa/arc/
 %attr(-,sympa,sympa) %{_localstatedir}/lib/sympa/bounce/
 %attr(-,sympa,sympa) %{_localstatedir}/lib/sympa/list_data/
