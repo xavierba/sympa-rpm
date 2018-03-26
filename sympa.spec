@@ -712,6 +712,9 @@ fi
 %dir %attr(-,sympa,sympa) %{_sysconfdir}/sympa/
 %{_sysconfdir}/sympa/README
 %config(noreplace) %attr(0640,sympa,sympa) %{_sysconfdir}/sympa/sympa.conf
+%ghost %attr(0640,sympa,sympa) %{_sysconfdir}/sympa/cookies.history
+%ghost %attr(-,sympa,sympa) %{_sysconfdir}/sympa/data_structure.version
+%ghost %attr(-,sympa,sympa) %{_sysconfdir}/sympa/sympa.conf.bin
 %config(noreplace,missingok) %attr(-,sympa,sympa) %{_sysconfdir}/sympa/auth.conf
 %config(noreplace,missingok) %attr(-,sympa,sympa) %{_sysconfdir}/sympa/charset.conf
 %config(noreplace,missingok) %attr(-,sympa,sympa) %{_sysconfdir}/sympa/crawlers_detection.conf
