@@ -780,6 +780,11 @@ fi
 %else
 %{_initrddir}/sympa
 %attr(-,sympa,sympa) %{_localstatedir}/run/sympa/
+%ghost %attr(-,sympa,sympa) %{_localstatedir}/sympa/archived.pid
+%ghost %attr(-,sympa,sympa) %{_localstatedir}/sympa/bounced.pid
+%ghost %attr(-,sympa,sympa) %{_localstatedir}/sympa/bulk.pid
+%ghost %attr(-,sympa,sympa) %{_localstatedir}/sympa/sympa_msg.pid
+%ghost %attr(-,sympa,sympa) %{_localstatedir}/sympa/task_manager.pid
 %endif
 
 
