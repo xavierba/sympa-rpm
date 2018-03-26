@@ -770,6 +770,11 @@ fi
 %{_unitdir}/sympa-task.service
 %{_tmpfilesdir}/sympa.conf
 %ghost %attr(-,sympa,sympa) %{_rundir}/sympa/
+%ghost %attr(-,sympa,sympa) %{_rundir}/sympa/archived.pid
+%ghost %attr(-,sympa,sympa) %{_rundir}/sympa/bounced.pid
+%ghost %attr(-,sympa,sympa) %{_rundir}/sympa/bulk.pid
+%ghost %attr(-,sympa,sympa) %{_rundir}/sympa/sympa_msg.pid
+%ghost %attr(-,sympa,sympa) %{_rundir}/sympa/task_manager.pid
 %dir %{_sysconfdir}/systemd/system/sympa.service.d/
 %config(noreplace) %{_sysconfdir}/systemd/system/sympa.service.d/*
 %else
