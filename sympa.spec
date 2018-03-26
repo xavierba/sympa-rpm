@@ -762,6 +762,14 @@ fi
 %attr(-,sympa,sympa) %{_localstatedir}/lib/sympa/css/
 %attr(-,sympa,sympa) %{_localstatedir}/lib/sympa/pictures/
 %attr(-,sympa,sympa) %{_localstatedir}/spool/sympa/
+%ghost %attr(0750,sympa,sympa) %{_localstatedir}/spool/sympa/bulk/
+%ghost %attr(0750,sympa,sympa) %{_localstatedir}/spool/sympa/digest/
+%ghost %attr(0750,sympa,sympa) %{_localstatedir}/spool/sympa/moderation/
+%ghost %attr(0750,sympa,sympa) %{_localstatedir}/spool/sympa/outgoing/
+%ghost %attr(0750,sympa,sympa) %{_localstatedir}/spool/sympa/subscribe/
+%ghost %attr(0750,sympa,sympa) %{_localstatedir}/spool/sympa/viewmail/
+%ghost %attr(0750,sympa,sympa) %{_localstatedir}/spool/sympa/bounce/bad/
+%ghost %attr(0750,sympa,sympa) %{_localstatedir}/spool/sympa/msg/bad/
 %{_datadir}/sympa/
 %{_mandir}/man1/*
 %{_mandir}/man3/*
